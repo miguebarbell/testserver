@@ -1,0 +1,95 @@
+
+### LOGIN
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "miguel",
+  "password": "hashed"
+}
+
+
+### LOGIN
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "mike",
+  "password": "ygfdcusssssiqweuydfg"
+}
+
+
+### REGISTER
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "mike",
+  "password": "ygfdcusssssiqweuydfg"
+}
+
+### REGISTER
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "mike",
+}
+
+### GET MIKES EASY SCORES
+GET http://localhost:8080/scores/miguel/easy
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+### GET MIKES medium SCORES
+GET http://localhost:8080/scores/miguel/medium
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+### GET MIKES medium SCORES BAD REQUEST BY JWT
+GET http://localhost:8080/scores/miguel/medium
+Content-Type: application/json
+Authorization: Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+### GET MIKES EASY SCORES BAD REQUEST BY NAME
+GET http://localhost:8080/scores/migue/easy
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+### GET highscores
+GET http://localhost:8080/highscores/easy
+
+### GET highscores
+GET http://localhost:8080/highscores/medium
+
+### POST score a good score
+POST http://localhost:8080/score
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+{
+  "username": "miguel",
+  "score": 30,
+  "difficulty": "easy"
+}
+
+### POST score a bad score
+POST http://localhost:8080/score
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+{
+  "username": "miguel",
+  "score": 30
+}
+
+### POST score a bad jwt
+POST http://localhost:8080/score
+Content-Type: application/json
+Authorization: Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+{
+  "username": "miguel",
+  "score": 30,
+  "difficulty": "easy"
+}
