@@ -16,7 +16,11 @@ public class AuthorizationController {
 
 	Jwt jwt = new Jwt("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" + ".eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ" + ".SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
 	String username = "miguel";
-	String password = "hashed";
+//	String password = "hashed";
+//	String password = "U2FsdGVkX18HYydxWuCFBLslkZn2a8R51JgWX4TN2cXahyugFL74IUz5" +
+//			"+0a9O8neHKxaWz7Vj9mWrSqJFxX1uLrEcI4FlTbcCfEdq9GdBNL5sXxpq" +
+//			"+1BzLMwkrR+u3RktcKTLZJUaos9f3j2xVq8oA==";
+String password =	"b390264a923529cdd2012d033c790ea522effb9b15d7800d3db41effe58fd346";
 
 
 	@CrossOrigin("*")
